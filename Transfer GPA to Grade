@@ -1,0 +1,42 @@
+#longer version
+while True:
+
+    grade=float(input('enter your grade  :'))
+    if grade>=0 and 4.3>=grade:
+
+        if grade==4.3:
+            print('A+')
+            break
+        elif grade>=4:
+            print('A')
+            break
+        elif grade>=3.7:
+            print('A-')
+            break
+        elif grade>=3.3:
+            print('B+')
+            break
+        elif grade>=3:
+            print('B')
+            break
+        elif grade>=2.7:
+            print('B-')
+            break
+        elif grade>=2.3:
+            print('C+')
+            break
+        elif grade>=2:
+            print('C')
+            break
+        elif grade>=2:
+            print('C-')
+            break
+        elif grade>=1.3:
+            print('D+')
+            break
+        elif grade>=1:
+            print('D')
+            break
+        elif grade==0:
+            print('F')
+            break
