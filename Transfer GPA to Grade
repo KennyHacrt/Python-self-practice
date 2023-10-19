@@ -41,4 +41,19 @@ while True:
             print('F')
             break
 #shorter version(still working)
+Grade_list=[4.3,4,3.7,3.3,3,2.7,2.3,2,1.7,1.3,1,0]
+Related_list=['A+','A','A-','B+','B','B-','C+','C','C-','D+','D','F']
+ask=float(input('enter your grade  :'))
+key=0
+while True:
+    if ask<=4.3 and ask>=0:
+        key=1    
+        for i in range(len(Grade_list)):
+            if ask>=Grade_list[i]:
+                print(Related_list[i])
+                break
+    else:
+        ask=float(input('enter your grade again [0<=grade<=4.3]  :'))
+    if key==1:
+        break
 
