@@ -1,26 +1,28 @@
 GOOD_MESSAGE=['Try again!You can do it!!','Come on!You almost did it!','You nearly made it mate!']
 def Game_mode(a,b,tries,CHANCE,recognise_level):
     PICKED_NUMBER=random.randint(a,b)
-    for i in range(tries):
+    for i in range(tries):   
         USERS_GUESS=int(input('what is your guess :  '))
-        
-        if CHANCE==0:
-            print(f'you lose!!The answer is {PICKED_NUMBER}')
-            break
         if USERS_GUESS==PICKED_NUMBER:
             print('you win!!')
             break
         elif USERS_GUESS>PICKED_NUMBER:
+            CHANCE-=1
+            if CHANCE==0:
+                print(f'you lose!!The answer is {PICKED_NUMBER}')
+                break
             if recognise_level!=0:
                 print('Lower')
             print(random.choice(GOOD_MESSAGE))
-            CHANCE-=1
             print(f'you still have {CHANCE} chances left')
         elif USERS_GUESS<PICKED_NUMBER:
+            CHANCE-=1
+            if CHANCE==0:
+                print(f'you lose!!The answer is {PICKED_NUMBER}')
+                break
             if recognise_level!=0:
                 print('Higher')
             print(random.choice(GOOD_MESSAGE))
-            CHANCE-=1
             print(f'you still have {CHANCE} chances left')
         
 def number_guessing(DIFFICULT_LEVEL):
