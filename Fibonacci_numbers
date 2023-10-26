@@ -38,3 +38,22 @@ def Fibonacci_numbers(no):
             print(b,end=' ')
             b=a+b
 Fibonacci_numbers(8) 
+
+
+
+#advance code,put them all into a list and return it to the function
+def Fibonacci_numbers(no):
+    a,b=1,1
+    MY_LIST=[]  
+    for i in range(no):
+        if i%2==1:
+            MY_LIST.append(a)
+            a=a+b
+            
+        else:
+            MY_LIST.append(b)
+            b=a+b
+        if i==no-1:
+            return MY_LIST
+
+print(Fibonacci_numbers(8))    
