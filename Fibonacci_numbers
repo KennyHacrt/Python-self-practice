@@ -23,3 +23,18 @@ def Fibonacci_numbers(no):
 
 required_no=int(input('enter numbers you want,integers only   :'))
 Fibonacci_numbers(required_no)
+
+
+
+#better and shorter method, made it a function
+def Fibonacci_numbers(no):
+    a,b=1,1
+    for i in range(no):
+        if i%2==1:
+            print(a,end=' ')
+            a=a+b
+            
+        else:
+            print(b,end=' ')
+            b=a+b
+Fibonacci_numbers(8) 
