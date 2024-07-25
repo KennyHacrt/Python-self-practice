@@ -1,0 +1,16 @@
+def reverse(self, x):
+        y=str(x)
+        a=len(y)
+        sum=0
+        if y[0]=='-':
+            for i in range(1,a):
+                sum+=int(y[i])*(10**(i-1))
+            sum=-sum
+        else:
+            for i in range(a):
+                sum+=int(y[i])*(10**i)
+        if sum>2**31-1 or sum<-2**31:
+            return 0
+        else:
+            return sum
+
