@@ -1,0 +1,19 @@
+def lengthOfLongestSubstring(self, s):
+        l=len(s)
+        temp=0
+        alph=[]
+        if l==1:
+            return 1
+        for i in range(l):
+            if temp<len(alph):
+                temp=len(alph) #4
+            alph.append(s[i])
+            for j in range(len(alph)-1): 
+                if alph[j]==s[i]:
+                    for k in range(j):
+                        alph.pop(0)
+                    alph.pop(0)
+                    break
+        if temp<len(alph):
+            temp=len(alph)
+        return temp
