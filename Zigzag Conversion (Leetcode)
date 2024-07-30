@@ -1,0 +1,26 @@
+def convert(self, s, numRows):
+        l=len(s)
+        if numRows<3:
+            mid=0
+        else:
+            mid=numRows-2
+        new=[]
+        ns='0'
+        a=mid+numRows
+        x=l//a
+        mov_mid=mid
+       
+        for j in range(numRows):
+            for i in range(x+1):
+                temp=j+a*i
+                if temp>=l:
+                    break
+                new.append(s[temp])
+                if j!=numRows-1 and j!=0 :
+                    if temp+mov_mid*2>=l:
+                        break
+                    new.append(s[temp+mov_mid*2])
+            if j!=numRows-1 and j!=0 :
+                mov_mid-=1   
+        ns=''.join(new)    
+        return ns    
